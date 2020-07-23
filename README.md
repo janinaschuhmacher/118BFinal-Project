@@ -2,12 +2,18 @@
 
 Implementation and Evaluation of several machine learning models to predict housing prices as part of the UC San Diego class COGS118B Intro to Machine Learning
 
-## Goal of the project
-Prediction task is to determine whether a person makes over 50K a year. 
+ <img src="https://github.com/janinaschuhmacher/UCSD_COGS118B_final_ML_project/blob/master/test_accuracies.png" alt="Test accuracies for each classifier per feature
+                                                                                                                      and overall"  width="800" height="800">
+
+
+## Summary
+
+In this project, we compared the performance of different classifiers in a binary classification task. The goal was to predict if a person makes more or less than 50 k per year, given a set of categorical and continuous attributes. The algorithms which we used were support vector machines with linear kernel (SVM) and multilayer perceptrons with different activation functions. As can be seen in the figure above, testing accuracy was around 0.86 for all classifiers except for SVM with automated correction for class imbalance which had significantly lower testing accuracy. Training and testing accuracies were similar for all classifiers, indicating good generalization from training to test data. The biggest challenge consisted in the imbalance in the data set, resulting in relatively poor recall rates and, consequently, low F1 scores. Using sklearn’s automated
+correction for class imbalance improved recall but at the cost of lowering precision.
 
 ## The data
 
-According to information from the [UCI ML repository](https://archive.ics.uci.edu/ml/datasets/adult), the data was extracted by Barry Becker from the 1994 Census database. 
+For our project, we use the [“Census Income Data Set”](https://archive.ics.uci.edu/ml/datasets/Census+Income).
 
 The following attributes are part of the dataset: 
 
@@ -28,9 +34,9 @@ We used the following predictor variables:
 * hours-per-week: continuous
 Further, we only included datapoints from the US to avoid class imbalance. 
 
-Source: https://archive.ics.uci.edu/ml/datasets/adult
+Further information about the data set and relevant publication can be found on the UCI Machine Learning Repository website (https://archive.ics.uci.edu/ml/datasets/Census+Income).
 
 
-## Method
+
 
 
